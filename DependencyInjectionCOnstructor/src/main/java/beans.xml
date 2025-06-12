@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="empobj" class="com.di.Employee">
+    <constructor-arg name="id" value="101"></constructor-arg>
+    <constructor-arg name="name" value="devadatta"></constructor-arg>
+    <constructor-arg name="dept" value="cse"></constructor-arg>
+    <constructor-arg  name="roles">
+    <list>
+        <value>Java</value>
+        <value>python</value>
+        <value>sql</value>
+    </list>
+    </constructor-arg>
+    <constructor-arg name="address" ref="addrobj"></constructor-arg>
+  
+    </bean>
+
+<bean id="addrobj" class="com.di.Address">
+<constructor-arg name="id" value="102"></constructor-arg>
+<constructor-arg name="dno" value="234"></constructor-arg>
+<constructor-arg name="street" value="hyderabad"></constructor-arg>
+</bean>
+</beans>
