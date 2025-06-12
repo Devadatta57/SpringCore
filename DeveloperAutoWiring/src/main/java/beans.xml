@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <bean id="developer" class="com.di.Developer" autowire="byType">
+   <!--- <property name="comp" ref="lappy"></property> -->
+  <!--- <constructor-arg name="comp" ref="lappy"></constructor-arg> -->
+    </bean>
+
+<bean id="deskobj" class="com.di.Desktop" primary="true"></bean>
+<bean  id="comp" class="com.di.Laptop"></bean>
+</beans>                               
